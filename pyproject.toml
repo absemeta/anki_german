@@ -1,14 +1,19 @@
 [tool.poetry]
 name = "anki-german"
 version = "0.1.0"
-description = ""
+description = "CLI tool for translating words"
 authors = ["Askar Absemetov <ask.register@gmail.com>"]
 readme = "README.md"
-packages = [{include = "anki_german", from = "src"}]
+packages = [{ include = "anki_german", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+typer = "^0.15.1"
+openai = "^1.0.0"
+python-dotenv = "^1.0.1"
 
+[tool.poetry.scripts]
+anki-german = "anki_german:main"
 
 [build-system]
 requires = ["poetry-core"]
